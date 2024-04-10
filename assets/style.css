@@ -1,0 +1,77 @@
+/*styles*/
+#hero {
+  display: flex;
+  position: relative; 
+  overflow-x: hidden;
+  padding-left: 48px;
+}
+
+.left, .right {
+  width: 50%;
+}
+
+.heroimg {
+  object-fit: cover;
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+}
+
+.title, .subtitle {
+  font-weight: 700;
+  font-size: 64px;
+  width: 70%;
+  font-family: sans-serif;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 18px;
+}
+
+p {
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.herobutton {
+  border: 5px solid #000000;
+  background: transparent;
+  padding: 0 24px;
+  cursor: pointer;
+  margin-top: 24px;;
+}
+ .herobutton p {
+  font-weight: 500;
+}
+
+.herobutton:hover {
+  background: #000000;
+  color: #FFFFFF;
+}
+
+.wave-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1; /* Ensure wave SVG is behind content */
+}
+
+.wavetext {
+  position: relative;
+  color:#000000;
+  z-index: 50; 
+  animation: wave-animation 20s ease-in-out linear; 
+}
+
+
+@keyframes wave-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
